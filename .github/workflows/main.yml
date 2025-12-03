@@ -45,7 +45,7 @@ jobs:
               env:
                 NAMESPACE: ${{ vars.NAMESPACE }}
                 REPLICAS: ${{ vars.REPLICAS}}
-                IMAGE: ${{ vars.IMAGE_NAME }}
+                IMAGE: IMAGE: ${{ vars.DOCKER_USERNAME }}/${{ vars.IMAGE_NAME }}:latest
 
             - name: Check Files
               run: |

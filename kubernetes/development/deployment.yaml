@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: candlestick-mysql-app-deploy
+  labels:
+    name: candlestick-mysql-app-deploy
+    app: candlestick-mysql-app
+  namespace: _{_NAMESPACE_}_
+spec:
+  replicas: _{_REPLICAS_}_
+  selector:
+    matchLabels:
+      name: candlestick-mysql-app-pod
+      app: candlestick-mysql-app
+
+  template:
+    metadata:
+      name: candlestick-mysql-app-pod
+      labels:
+        name: candlestick-mysql-app-pod
+        app: candlestick-mysql-app
+    spec:
+      containers:
+        - name: candlestick-mysql-app
+          imagePullPolicy: Always
+          image: _{_IMAGE_}_
+          ports:
+            - containerPort: 3306
+              name: mysql
+            
