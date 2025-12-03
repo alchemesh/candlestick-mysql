@@ -16,7 +16,7 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v5
-              
+
             - name: Docker Login
               uses: docker/login-action@v2.2.0
               with:
@@ -33,7 +33,7 @@ jobs:
             - name: Docker Image Testing
               run: |
                   docker run --name mysql-app -itd \
-                      --env=MYSQL_ROOT_PASSWORD=${{ vars.DOCKER_USERNAME }}\
+                      --env=MYSQL_ROOT_PASSWORD=${{ vars.MYSQL_PASS }}\
                       -p 3306:3306 \
                       ${{ vars.DOCKER_USERNAME }}/${{ vars.IMAGE_NAME }}:latest
 
@@ -89,6 +89,7 @@ jobs:
                 NAMESPACE: ${{ vars.NAMESPACE }}
                 REPLICAS: ${{ vars.REPLICAS}}
                 IMAGE: ${{ vars.DOCKER_USERNAME }}/${{ vars.IMAGE_NAME }}:latest
+                MYSQL_PASS: ${{ vars.MYSQL_PASS }}
 
             - name: Check Files
               run: |

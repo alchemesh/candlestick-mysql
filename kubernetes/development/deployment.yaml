@@ -24,6 +24,9 @@ spec:
         - name: candlestick-mysql-app
           imagePullPolicy: Always
           image: _{_IMAGE_}_
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: _{_MYSQL_PASS_}_
           ports:
             - containerPort: 3306
               name: mysql
