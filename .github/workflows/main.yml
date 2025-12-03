@@ -11,7 +11,7 @@ jobs:
     build_image_job:
         name: Docker Containerization
         #needs: unit_test_job
-        #if: github.ref == 'refs/head/main'
+        if: github.ref == 'refs/head/feature'
         runs-on: self-hosted
         steps:
             - name: Checkout
