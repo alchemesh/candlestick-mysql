@@ -16,7 +16,7 @@ Deploy the image using Docker, Kubernetes, or any other container orchestration 
 ### Environment variables ###
 
 The docker image needs a single environment variable to function
-- MY_ROOT_PASSWORD
+- MYSQL_ROOT_PASSWORD
 
 ### Docker ###
 
