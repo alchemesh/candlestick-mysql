@@ -6,7 +6,7 @@ There are 3 tables in the Stock_Events database
 * events
 * day 
 
-Data about the specific event is stored and retrieved from the database by the Java API, which can be found in the [JAVA API] (https://github.com/alchemesh/candlestick-java-api) repo.
+Data about the specific event is stored and retrieved from the database by the Java API, which can be found in the [JAVA API](https://github.com/alchemesh/candlestick-java-api) repo.
 
 
 ## How to use ##
@@ -15,7 +15,7 @@ Deploy the image using Docker, Kubernetes, or any other container orchestration 
 
 ### Environment variables ###
 
-The docker images needs a single environment variable to function
+The docker image needs a single environment variable to function
 - MY_ROOT_PASSWORD
 
 ### Docker ###
